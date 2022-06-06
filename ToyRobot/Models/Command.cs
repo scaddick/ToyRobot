@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace ToyRobots.Models
 {
     public class Commands : ICommands
     {
         private string _primaryCommand;
-        private Compass _direction; 
+        private Compass _direction;
         private string[] _commandList;
         private Coordinates _coordinates;
         private bool _commandIsValid;
@@ -43,16 +41,16 @@ namespace ToyRobots.Models
                     _commandList = new string[] { _primaryCommand };
                     break;
                 case "LEFT":
-                    _commandList = new string[] {_primaryCommand};
+                    _commandList = new string[] { _primaryCommand };
                     break;
                 case "RIGHT":
                     _commandList = new string[] { _primaryCommand };
                     break;
                 case "REPORT":
-                    _commandList = new string[] { _primaryCommand }; 
+                    _commandList = new string[] { _primaryCommand };
                     break;
                 default:
-                    _commandList = new string[] { "Invalid Command"};
+                    _commandList = new string[] { "Invalid Command" };
                     return false;
 
             }

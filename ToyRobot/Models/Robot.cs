@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using ToyRobots.Configuration;
 
 namespace ToyRobots.Models
@@ -15,7 +14,7 @@ namespace ToyRobots.Models
         {
             get => _validPosition;
         }
-        public string Report 
+        public string Report
         {
             get => $"{_position.X},{_position.Y},{_direction.ToString().ToUpper()}";
         }
@@ -30,11 +29,11 @@ namespace ToyRobots.Models
             _table = table;
             _position = position;
             _direction = CompassConverter.SetDirection(direction);
-        }        
+        }
 
         public Coordinates GetPosition()
         {
-           return _position;
+            return _position;
         }
 
         public Compass GetDirection()
@@ -79,7 +78,8 @@ namespace ToyRobots.Models
         private void PositionToy(string[] commandList)
         {
             if (commandList.Length != 4) Console.WriteLine("Invalid Position Command");
-            else {
+            else
+            {
                 int x = Convert.ToInt32(commandList[1]);
                 int y = Convert.ToInt32(commandList[2]);
                 Compass newDirection = CompassConverter.SetDirection(commandList[3]);
@@ -103,7 +103,8 @@ namespace ToyRobots.Models
             {
                 _direction++;
             }
-            else {
+            else
+            {
                 _direction = Compass.North;
             }
         }
@@ -130,7 +131,7 @@ namespace ToyRobots.Models
                         _position.Y++;
                     }
                     else CallOutOfBounds();
-                    
+
                     break;
                 case Compass.South:
                     if (_position.Y > 0)

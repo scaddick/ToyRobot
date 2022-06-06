@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace ToyRobots.Models
 {
@@ -21,20 +19,15 @@ namespace ToyRobots.Models
             {
                 case "NORTH":
                     return Compass.North;
-                    break;
                 case "SOUTH":
-                    return  Compass.South;
-                    break;
+                    return Compass.South;
                 case "EAST":
                     return Compass.East;
-                    break;
                 case "WEST":
                     return Compass.West;
-                    break;
                 default:
                     Console.WriteLine("Compass direction is invalid");
                     return 0;
-                    break;
             }
         }
     }

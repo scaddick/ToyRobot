@@ -1,5 +1,5 @@
-﻿using System;
-using Microsoft.Extensions.Configuration;
+﻿using Microsoft.Extensions.Configuration;
+using System;
 using ToyRobots.Configuration;
 using ToyRobots.Controller;
 
@@ -12,8 +12,6 @@ namespace ToyRobots
         static void Main(string[] args)
         {
             Initialise();
-
-            Console.WriteLine("Hello World!");
         }
 
         private static void Initialise()

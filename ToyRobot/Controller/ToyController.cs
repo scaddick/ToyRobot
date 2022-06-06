@@ -27,6 +27,11 @@ namespace ToyRobots.Controller
             {
                 Console.WriteLine("Please enter a command:");
                 string inputCommand = Console.ReadLine();
+                if(inputCommand.ToUpper() == "EXIT")
+                {
+                    exit = true;
+                    break;
+                }
                 Commands command = new Commands(inputCommand);
                 if(!robotIsSet && command.CommandList[0].ToUpper() != "PLACE")
                 {
