@@ -9,5 +9,6 @@ appSettings.json will allow for altering the table size
 
 if I had more time to work on this I would like to have included the ability to read in commands from a text file,
 add a second robot to control independently, checks between robots whether the location they are moving to is valid and currently accessible.
+add multiple types of toys that could be placed on the table with their own instructions hence inconsistent naming of toy/robot
 
 there is limited commenting withing the code, I aim to have the functions as readable without the need for comments as much as possible.
